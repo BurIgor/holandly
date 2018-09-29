@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    .timeline
+        .head
+            .event-owner= owner
+        .event-header
+            .top_container
+                #event-name= event
+                #event-duarion= '⌚   ' + duration + ' min'
+            #event-description= description
+        .timeline-content
+            span.backward ❮
+            ul.date-bar
+                - list = days
+                    - for (var i = 0; i < list.length-1; i++)
+                        if list[i].available
+                            li.active= list[i].date
+                            .divider
+                        else
+                            li= list[i].date
+                            .divider
+                    if list[list.length-1].available
+                        li.active= list[list.length-1].date
+                    else
+                        li= list[list.length-1].date
+            span.forward ❯
+        .time-container
+            ul
+    script(src="/javascripts/jquery-3.3.1.min.js")
+    script(src='/javascripts/date-time-handler.js')

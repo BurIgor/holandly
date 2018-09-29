@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .events
+        .head
+            .event-owner= username
+    .event-list
+        ul
+            - list = patterns;
+            each item in list
+                li
+                    .event-header= item.event
+                    .event-desc= item.description
+    .bg-modal
+        .modal-content
+            #modal-owner= username
+            #modal-desc= eventDesc
+            form
+                p.modal-button.confirm Yes
+                p.modal-button No
+    script(src="/javascripts/jquery-3.3.1.min.js")
+    script(src='/javascripts/event-handler.js')

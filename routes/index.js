@@ -12,6 +12,10 @@ var borisDB = {
 
 var con = mysql.createConnection(borisDB);
 //var con = mysql.createConnection(borisDB);
+//var con = mysql.createConnection(borisDB);
+//var con = mysql.createConnection(borisDB);
+//var con = mysql.createConnection(borisDB);
+//var con = mysql.createConnection(borisDB);
 
 con.connect(function(err) {
     if (err) throw err;

@@ -10,15 +10,12 @@ var borisDB = {
     database: "holandly"
 };
 
-var igorDB = {
-    host: "localhost",
-    user: "root",
-    password: "54321",
-    database: "shppcalendly"
-};
-
-var con = mysql.createConnection(igorDB);
-// var con = mysql.createConnection(borisDB);
+var con = mysql.createConnection(borisDB);
+//var con = mysql.createConnection(borisDB);
+//var con = mysql.createConnection(borisDB);
+//var con = mysql.createConnection(borisDB);
+//var con = mysql.createConnection(borisDB);
+//var con = mysql.createConnection(borisDB);
 
 con.connect(function(err) {
     if (err) throw err;

@@ -3,12 +3,14 @@ var router = express.Router();
 
 var mysql = require('mysql');
 
-var con = mysql.createConnection({
+var borisDB = {
     host: "localhost",
     user: "root",
     password: "7B0fb6967",
     database: "holandly"
-});
+};
+
+var con = mysql.createConnection({borisDB);
 
 con.connect(function(err) {
     if (err) throw err;
